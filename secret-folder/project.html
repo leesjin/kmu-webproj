@@ -5,6 +5,7 @@
         <style>
             div {
                 display: block;
+                font-family: "Open Sans","NG","Malgun Gothic","sans-serif";
             }
             .hancomback {
                 background-size: cover;
@@ -17,6 +18,78 @@
                 height: 550px;
             }
 
+            #header {
+                position: absolute;
+                top: 40px;
+                right: 0;
+                left: 0;
+            }
+
+            .header_top {
+                margin: 0 300px 0px 350px;
+                height: 60px;
+                padding: 0 0 0;
+                border-bottom: 1px solid #cbcbcb;
+                background-color: #fff;
+                position: relative;
+            }
+
+            .header_top .logo {
+                margin: 15px 0 0 20px;
+                width: 105px;
+                float: left;
+            }
+
+            .header_top .gnb {
+                width: 290px;
+                margin-top: 20px;
+                float: left;
+            }
+
+            .header_top .gnb ul li {
+                float: left;
+                font-size: 100%;
+            }
+
+            .header_top .gnb ul li a {
+                display: block;
+                color: black;
+                padding: 0 25px 0 25px;
+                font-size: 18px;
+                font-family: "NGB" !important;
+                font-weight: normal;
+            }
+
+            .header_top .evt_area {
+                float: right;
+                height: 60px;
+                width: 150px;
+                background-image: url("media/바오른쪽.png");
+            }
+
+            .header_top .util {
+                position: relative;
+                top: 19px;
+                float: right;
+                margin-right: 40px;
+                right: 0;
+            }
+
+            .header_top .util ul {
+                text-align: right;
+                height: 18px;
+            }
+
+            .header_top .util ul li {
+                display: inline-block;
+                padding: 0 0 0 16px;
+                font-size: 13px;
+            }
+
+            .header_top .util ul li:hover {
+                text-decoration: underline;
+            }
+            
             table {
                 margin : 50px 350px;
                 text-align: center;
@@ -34,6 +107,7 @@
             ul {
                 list-style: none;
                 padding-left: 0px; 
+                font-size : 14px;
             }
 
             a {
@@ -66,14 +140,14 @@
                 background-repeat: no-repeat;
                 width: 100%;
                 height: 300px;
-                margin: 280px 0px 0px 0px;
+                margin: 300px 0px 0px 0px;
             }
 
             .f_gnb {
                 padding-top: 23px;
                 border-bottom: 0;
                 position: relative;
-                margin : 10px 0px 0px 300px;
+                margin : 10px 0px 0px 350px;
             }
 
             .f_gnb dl {
@@ -124,19 +198,141 @@
                 padding-top: 22px;
                 font-size: 13px;    
             }   
+
+            .hancomback td {
+                position: absolute;
+            }
+
+            .notice li:hover {
+                text-decoration: underline;
+            }
+
+            .notice span:hover {
+                text-decoration: none;
+            }
+
+            .sns li:hover {
+                text-decoration: underline;
+            }
+
+            .bottominner_box .f_etc {
+                position: absolute;
+                right: 103px;
+                bottom : auto;
+                top : 43px;
+                margin: 0 300px 0 0;
+            }
+
+            select {
+                text-rendering: auto;
+                color: initial;
+                letter-spacing: normal;
+                word-spacing: normal;
+                text-transform: none;
+                text-indent: 0px;
+                text-shadow: none;
+                display: inline-block;
+                text-align: start;
+                margin: 0em;
+                font: 400 13.3333px Arial;
+            }
+
+            .top {
+                display: inline;
+            }
+
+            .notice ul li span {
+                position: absolute;
+                right: 0;
+            }
+
+            .f_gnb .area dl dd:hover {
+                text-decoration: underline;
+            }
+
+            .f_gnb .area dl dt {
+                font-size: 14px;
+                float: left;
+                width: 70px;
+            }
+
+            .f_gnb .area dl dd.first {
+                padding-left: 0px;
+            }
+
+            .notice ul li {
+                padding-top:18px;
+            }
+
+            .notice ul li.first {
+                padding-top:0px;
+            }
+
+            .no-event li.center {
+                text-align: center;
+            }
+
+            .no-event li.center span {
+                top: 2px;
+            }
+
+            .f_etc {
+                bottom: auto;
+                top: 43px;
+                right: 0;
+            }
+
+            .f_etc .zoom {
+                box-sizing: border-box;
+                width: 71px;
+                height: 26px;
+                padding: 6px 0 0 13px;
+            }
         </style>
     </head>
     <body>
-        <div class="hancomback"></div>
+        <div class="hancomback">
+             <header id="header">
+                <!-- header_top -->		
+                <div class="header_top box_inner clear_both"><!-- 20181029 로고이미지 수정 -->
+                    <h1 class="logo"><a href="http://www.hancom.com/"><img src="media/메뉴왼쪽사진.png" alt="한글과컴퓨터 HANCOM"></a></h1>
+                    <!-- gnb -->
+                    <div class="gnb">
+                        <ul id="gnbLv0">
+                            <li><a href="http://www.hancom.com/product/productMain.do?gnb0-23&gnb1="></a>제품</li>
+                            <li><a href="https://www.hancom.com/goods/subMain.do?gnb0=24&gnb1="></a>구매</li>
+                            <li><a href="https://www.hancom.com/cs_center/csMain.do?gnb0=25&gnb1="></a>고객지원</li>
+                        </ul>
+                    </div>
+                    <!-- //gnb -->        
+                    <!-- 20181029 한컴 이벤트 노출부분 -->
+                    <div class="evt_area">
+                        <a href="http://www.hancom.com/product/productWindowsMain.do" style="text-decoration: none"></a>
+                    </div>
+                    <!-- // 20181029 -->
+                    <!-- util -->
+                    <div class="util">
+                        <ul class="clear_both">
+                            <li><a href="https://www.hancom.com/member/loginView.do" style="text-decoration: none">로그인</a></li>
+                            <li><a href="https://www.hancom.com/member/signup.do" style="text-decoration: none">회원가입</a></li>
+                            <li><a href="http://www.hancom.com/mypage/myOrderList.do" style="text-decoration: none">주문/배송</a></li>
+                            <li><a href="http://www.hancom.com/mypage/nomemCartList.do" style="text-decoration: none">장바구니</a></li>
+                            <li class="incMenu"><a href="http://www.hancom.com/hanfriends/friendsMain.do" style="text-decoration: none">H &amp; Friends</a></li>
+                        </ul>
+                    </div>
+                    <!-- //util -->
+                </div>
+            </header>        
+        </div>
         <table>
             <caption></caption>
             <tbody>
                 <tr>
-                    <td><img src = "media/bm_download.png"></td>
-                    <td><img src = "media/bm_buy.png"></td>
-                    <td><img src = "media/bm_question.png"></td>
-                    <td><img src = "media/bm_bodo.png"></td>
-                    <td><img src = "media/bm_event.png"></td>
+                    <td><a href = "https://www.hancom.com/cs_center/csDownload.do"><img src = "media/bm_download.png" onmouseover="this.src='media/hover다운로드2.png';" onmouseout="this.src='media/bm_download.png';"></a></td>
+                    <td><a href="https://www.hancom.com/goods/subMain.do"><img src = "media/bm_buy.png" onmouseover="this.src='media/hover제품구매2.png';" onmouseout="this.src='media/bm_buy.png';"></a></td>
+                    <td><a href="https://www.hancom.com/goods/subMain.do"><img src = "media/bm_question.png" onmouseover="this.src='media/hover질문2.png';" onmouseout="this.src='media/bm_question.png';"></a></td>
+                    <td><a href="https://www.hancom.com/board/newsList.do"><img src = "media/bm_bodo.png" onmouseover="this.src='media/hover보도자료2.png';" onmouseout="this.src='media/bm_bodo.png';"></a></td>
+                    <td><a href="https://www.hancom.com/goods/eventList.do"><img src = "media/bm_event.png" onmouseover="this.src='media/hover이벤트2.png';" onmouseout="this.src='media/bm_event.png';"></a></td>
                 </tr>
             </tbody>
         </table>
@@ -145,9 +341,9 @@
             <tbody>
                 <tr>
                     <td><img src = "media/왼쪽2.png"></td>
-                    <td><img src = "media/한컴스페.png"></td>
-                    <td><img src = "media/오피스.png"></td>
-                    <td><img src = "media/오피스웹.png"></td>
+                    <td><a href="https://www.hancom.com/product/productNetfficeMain.do"><img src = "media/한컴스페.png" onmouseover="this.src='media/hover스페이스.png';" onmouseout="this.src='media/한컴스페.png';"></a></td>
+                    <td><a href="https://www.hancom.com/product/productWindowsMain.do?prdt_cd=010779"><img src = "media/오피스.png" onmouseover="this.src='media/hover오피스.png';" onmouseout="this.src='media/오피스.png';"></a></td>
+                    <td><a href="https://www.hancom.com/product/productOfficeMain.do?gnb0=23&gnb1=30"><img src = "media/오피스웹.png" onmouseover="this.src='media/hover오피스웹.png';" onmouseout="this.src='media/오피스웹.png';"></a></td>
                     <td><img src = "media/오른쪽2.png"></td>
                 </tr>
             </tbody>
@@ -156,32 +352,36 @@
             <div class = "notice">
                 <h3>공지사항</h3>
                 <ul>
-                    <li><a href="/board/noticeView.do?artcl_seq=8751" style="text-decoration: none" >2019 한글과컴퓨터 비즈니스 파...
+                    <li class ="first"><a href="https://www.hancom.com/board/noticeView.do?artcl_seq=8751" style="text-decoration: none" >2019 한글과컴퓨터 비즈니스 파...
                         &nbsp;<img src="media/첨부파일이미지.png" alt="첨부파일 있음"/></a>
                         <span>2018-11-29</span>
                     </li>
                     <li>
-                        <a href="/board/noticeView.do?artcl_seq=8327" style="text-decoration: none">아래아한글 한자변환 기능관련 안내</a>
+                        <a href="https://www.hancom.com/board/noticeView.do?artcl_seq=8327" style="text-decoration: none">아래아한글 한자변환 기능관련 안내</a>
                         <span>2018-07-31</span>
                     </li>
                     <li>
-                        <a href="/board/noticeView.do?artcl_seq=7740" style="text-decoration: none">개인정보처리방침 개정 안내(201...</a>
+                        <a href="https://www.hancom.com/board/noticeView.do?artcl_seq=7740" style="text-decoration: none">개인정보처리방침 개정 안내(201...</a>
                         <span>2018-02-03</span>
                     </li>
                     <li>
-                        <a href="/board/noticeView.do?artcl_seq=7427" style="text-decoration: none">개인정보처리방침 개정 안내 (20...</a>
+                        <a href="https://www.hancom.com/board/noticeView.do?artcl_seq=7427" style="text-decoration: none">개인정보처리방침 개정 안내 (20...</a>
                         <span>2017-09-07</span>
                     </li>
                 </ul>
             </div>
             <div class = "sns">
                 <h3>SNS</h3>
+                <ul>
+                    <li>
                     <a href="http://www.facebook.com/hancom.inc/posts/2231359673613034" style="text-decoration: none">한글과컴퓨터그룹, AWS Summit 서울 참가현장</a>
+                    </li>
+                </ul>
             </div>
             <div class= "event" >
                 <h3>EVENT</h3>
                 <ul  class="no-event clear-both">
-                    <li>
+                    <li class="center">
                         <img src="media/noevent.png" alt="이벤트 준비중"/>
                         <span>현재 진행중인 이벤트가 없습니다.</span>
                     </li>
@@ -192,20 +392,53 @@
             <div class="f_gnb">
                 <div class="area clear_both">
                     <dl>
-                        <dd style="color: white">자료실</dd>
+                        <dt style="color: white">자료실</dd>
                             <dd class="first"><a href="http://www.hancom.com/hanfriends/friendsTypingDownload.do" style="text-decoration: none">한컴 타자연습</a></dd>
                             <dd><a href="http://www.hancom.com/document/docuMallTheme.do" style = "text-decoration: none">문서서식</a></dd>
                             <dd><a href="http://www.hancom.com/etc/hwpDownload.do" style="text-decoration:none">HWP 포맷 공개</a></dd>
+                        </dt>
                     </dl>
                 </div>
                 <div class="area clar_both">
                     <dl>
-                        <dd style="color: white">회사소개</dd>
+                        <dt style="color: white">회사소개</dd>
                             <dd class="first"><a href="http://www.hancom.com/company/companyAbout.do" style="text-decoration: none">회사개요</a></dd>
                             <dd><a href="http://www.hancom.com/company/irStock.do" style="text-decoration : none">IR</a></dd>
                             <dd><a href="https://hancomgroup.recruiter.co.kr/appsite/company/index" style="text-decoration : none">인재채용</a></dd>
+                        </dt>
                     </dl>
                 </div>
+                <div class="f_etc clear_both">
+                    <div class="top">
+					    <div class="family_site">
+						    <select name="family_site" id="family_site">
+							    <option value="www.hancom.com" data-language="ko">한국어</option>
+							    <option value="www.hancom.com/global/" data-language="en">ENGLISH</option>
+						    </select>
+					    </div>
+					    <ul class="zoom">
+                            <li>
+                                <img src="media/줌키.png">
+                            </li>
+                        </ul>
+                    </div>
+					<div class="group_site clear_both">
+						<select id="group_site" name="group_site">
+							<option value="">한컴계열사 사이트</option>
+							<option value="https://www.hancomgroup.com/">한글과컴퓨터그룹</option>
+							<option value="https://www.hancom.com/">한글과컴퓨터</option>
+							<option value="http://www.hancommds.com/">한컴MDS</option>
+							<option value="https://www.hsecure.co.kr/">한컴시큐어</option>
+							<option value="http://www.hancomgmd.com/ko/">한컴GMD</option>
+							<option value="http://www.interfree.com/">한컴인터프리</option>
+							<option value="http://www.talkafe.net/">한컴톡카페</option>
+							<option value="http://www.sancheong.com/">산청</option>
+							<option value="http://hancomunimax.co.kr">한컴유니맥스</option>
+							<option value="http://teladin.com/">텔라딘</option>
+							<option value="http://www.hancomrobotics.com/">한컴로보틱스</option>
+						</select>
+					</div>
+				</div>
             </div>
             <div class="copyright">
                 <ul class="nav">
