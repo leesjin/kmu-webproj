@@ -40,18 +40,18 @@
                 float: left;
             }
 
-            .header_top .gnb {
+            .header_top .bar {
                 width: 290px;
                 margin-top: 20px;
                 float: left;
             }
 
-            .header_top .gnb ul li {
+            .header_top .bar ul li {
                 float: left;
                 font-size: 100%;
             }
 
-            .header_top .gnb ul li a {
+            .header_top .bar ul li a {
                 display: block;
                 color: black;
                 padding: 0 25px 0 25px;
@@ -67,7 +67,7 @@
                 background-image: url("media/바오른쪽.png");
             }
 
-            .header_top .util {
+            .header_top .bar_right {
                 position: relative;
                 top: 19px;
                 float: right;
@@ -75,18 +75,18 @@
                 right: 0;
             }
 
-            .header_top .util ul {
+            .header_top .bar_right ul {
                 text-align: right;
                 height: 18px;
             }
 
-            .header_top .util ul li {
+            .header_top .bar_right ul li {
                 display: inline-block;
                 padding: 0 0 0 16px;
                 font-size: 13px;
             }
 
-            .header_top .util ul li:hover {
+            .header_top .bar_right ul li:hover {
                 text-decoration: underline;
             }
             
@@ -130,8 +130,7 @@
             .event {
                 position: relative;
                 float: right;
-                width: 370px;
-
+                width: 380px;
             }
 
             .bottominner_box {
@@ -288,30 +287,40 @@
                 height: 26px;
                 padding: 6px 0 0 13px;
             }
+
+            .copyright .address {
+                color : gray;
+            }
+
+            .notice .moremore {
+                position: absolute;
+                right: 0;
+                top: 2px;
+            }
+
+            .sns .moremore {
+                position: absolute;
+                right: 0;
+                top: 5px;
+            }
         </style>
     </head>
     <body>
         <div class="hancomback">
              <header id="header">
-                <!-- header_top -->		
-                <div class="header_top box_inner clear_both"><!-- 20181029 로고이미지 수정 -->
+                <div class="header_top box_inner clear_both">
                     <h1 class="logo"><a href="http://www.hancom.com/"><img src="media/메뉴왼쪽사진.png" alt="한글과컴퓨터 HANCOM"></a></h1>
-                    <!-- gnb -->
-                    <div class="gnb">
-                        <ul id="gnbLv0">
-                            <li><a href="http://www.hancom.com/product/productMain.do?gnb0-23&gnb1="></a>제품</li>
-                            <li><a href="https://www.hancom.com/goods/subMain.do?gnb0=24&gnb1="></a>구매</li>
-                            <li><a href="https://www.hancom.com/cs_center/csMain.do?gnb0=25&gnb1="></a>고객지원</li>
+                    <div class="bar">
+                        <ul id="bar_left">
+                            <li><a href="http://www.hancom.com/product/productMain.do?gnb0-23&gnb1=" style = "color: blue" ></a>제품</li>
+                            <li><a href="https://www.hancom.com/goods/subMain.do?gnb0=24&gnb1=" style = "font-size: 18px"></a>구매</li>
+                            <li><a href="https://www.hancom.com/cs_center/csMain.do?gnb0=25&gnb1=" style = "font-size: 25px"></a>고객지원</li>
                         </ul>
                     </div>
-                    <!-- //gnb -->        
-                    <!-- 20181029 한컴 이벤트 노출부분 -->
                     <div class="evt_area">
                         <a href="http://www.hancom.com/product/productWindowsMain.do" style="text-decoration: none"></a>
                     </div>
-                    <!-- // 20181029 -->
-                    <!-- util -->
-                    <div class="util">
+                    <div class="bar_right">
                         <ul class="clear_both">
                             <li><a href="https://www.hancom.com/member/loginView.do" style="text-decoration: none">로그인</a></li>
                             <li><a href="https://www.hancom.com/member/signup.do" style="text-decoration: none">회원가입</a></li>
@@ -320,7 +329,6 @@
                             <li class="incMenu"><a href="http://www.hancom.com/hanfriends/friendsMain.do" style="text-decoration: none">H &amp; Friends</a></li>
                         </ul>
                     </div>
-                    <!-- //util -->
                 </div>
             </header>        
         </div>
@@ -328,7 +336,7 @@
             <caption></caption>
             <tbody>
                 <tr>
-                    <td><a href = "https://www.hancom.com/cs_center/csDownload.do"><img src = "media/bm_download.png" onmouseover="this.src='media/hover다운로드2.png';" onmouseout="this.src='media/bm_download.png';"></a></td>
+                    <td><a href ="https://www.hancom.com/cs_center/csDownload.do"><img src = "media/bm_download.png" onmouseover="this.src='media/hover다운로드2.png';" onmouseout="this.src='media/bm_download.png';"></a></td>
                     <td><a href="https://www.hancom.com/goods/subMain.do"><img src = "media/bm_buy.png" onmouseover="this.src='media/hover제품구매2.png';" onmouseout="this.src='media/bm_buy.png';"></a></td>
                     <td><a href="https://www.hancom.com/goods/subMain.do"><img src = "media/bm_question.png" onmouseover="this.src='media/hover질문2.png';" onmouseout="this.src='media/bm_question.png';"></a></td>
                     <td><a href="https://www.hancom.com/board/newsList.do"><img src = "media/bm_bodo.png" onmouseover="this.src='media/hover보도자료2.png';" onmouseout="this.src='media/bm_bodo.png';"></a></td>
@@ -369,6 +377,9 @@
                         <span>2017-09-07</span>
                     </li>
                 </ul>
+                <p class = "moremore">
+                    <img src = "media/more.png">
+                </p>
             </div>
             <div class = "sns">
                 <h3>SNS</h3>
@@ -377,13 +388,15 @@
                     <a href="http://www.facebook.com/hancom.inc/posts/2231359673613034" style="text-decoration: none">한글과컴퓨터그룹, AWS Summit 서울 참가현장</a>
                     </li>
                 </ul>
+                <p class = "moremore">
+                    <img src = "media/페인유.png">
+                </p>
             </div>
             <div class= "event" >
                 <h3>EVENT</h3>
                 <ul  class="no-event clear-both">
                     <li class="center">
-                        <img src="media/noevent.png" alt="이벤트 준비중"/>
-                        <span>현재 진행중인 이벤트가 없습니다.</span>
+                        <img src="media/노이벤트.png" alt="이벤트 준비중"/>
                     </li>
                 </ul>
             </div>
@@ -446,8 +459,8 @@
                     <li><a href="http://www.hancom.com/member/elecTradeAgreement.do" style ="text-decoration: none">전자금융거래 이용약관</a></li>
                     <li><a href="http://www.hancom.com/member/agreement.do" style="text-decoration: none">이용약관</a></li>
                 </ul>
-                <a class="external_link malang" href="https://www.hancomgroup.com/kr/business/malangmalang" rel="external" target="_blank" title="말랑말랑"><img src="media/말랑말랑.png" alt="말랑말랑" /></a>
-                <a class="external_link" href="http://www.copyrightok.kr/" rel="external" target="_blank" title="클린사이트"><img src="media/클린사이트.png" alt="클린사이트 로고" /></a>
+                <a class="external_link malang" href="https://www.hancomgroup.com/kr/business/malangmalang" title="말랑말랑"><img src="media/말랑말랑.png" alt="말랑말랑"></a>
+                <a class="external_link" href="http://www.copyrightok.kr/" title="클린사이트"><img src="media/클린사이트.png" alt="클린사이트"></a>
                 <p class="address">
                     경기도 성남시 분당구 대왕판교로 644번길 49 한컴타워 10층 &nbsp; &nbsp; 고객지원 (평일 9시-18시) : 국내고객 1566-5192 <br>
                     사업자등록번호 107-81-52230 &nbsp; &nbsp; 통신판매신고번호 2012-경기성남-1092 &nbsp; &nbsp;  (주)한글과컴퓨터 대표자 : 김상철 <br /> 
