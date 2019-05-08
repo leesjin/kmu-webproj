@@ -40,24 +40,23 @@
                 float: left;
             }
 
-            .header_top .bar {
+            .header_top .bar{
                 width: 290px;
-                margin-top: 20px;
+                margin-top: 8px;
                 float: left;
+                font-weight: bolder;
             }
 
             .header_top .bar ul li {
                 float: left;
-                font-size: 100%;
+                font-size: 18px;
+                padding-left: 20px;
             }
 
             .header_top .bar ul li a {
                 display: block;
                 color: black;
                 padding: 0 25px 0 25px;
-                font-size: 18px;
-                font-family: "NGB" !important;
-                font-weight: normal;
             }
 
             .header_top .evt_area {
@@ -76,6 +75,7 @@
             }
 
             .header_top .bar_right ul {
+                margin-top: 3px;
                 text-align: right;
                 height: 18px;
             }
@@ -84,6 +84,9 @@
                 display: inline-block;
                 padding: 0 0 0 16px;
                 font-size: 13px;
+                background-image: url("media/막대기배경.png");
+                background-repeat: no-repeat;
+                background-position: 4px 6px;
             }
 
             .header_top .bar_right ul li:hover {
@@ -216,7 +219,7 @@
 
             .bottominner_box .f_etc {
                 position: absolute;
-                right: 103px;
+                right: 50px;
                 bottom : auto;
                 top : 43px;
                 margin: 0 300px 0 0;
@@ -275,12 +278,6 @@
                 top: 2px;
             }
 
-            .f_etc {
-                bottom: auto;
-                top: 43px;
-                right: 0;
-            }
-
             .f_etc .zoom {
                 box-sizing: border-box;
                 width: 71px;
@@ -302,6 +299,50 @@
                 position: absolute;
                 right: 0;
                 top: 5px;
+            }
+
+            .f_etc .family_site {
+                box-sizing: border-box;
+                float: left;
+                width: 110px;
+                height: 26px;
+                border: #dedede;
+            }
+
+            .f_etc .family_site select {
+                width: 110px;
+                height: 26px;
+                padding-left: 7px;
+                color: #6b6a6b;
+                font-size : 13px;
+                font-weight: bold;
+                padding: 0;
+                line-height: 27px;
+                background-color: #fff;
+            }
+
+            .f_etc .zoom {
+                float: left;
+                margin-top : -7px;
+                margin-left:  -10px;
+            }
+
+            .f_etc .group_site {
+                box-sizing: border-box;
+                width: 184px;
+                height: 26px;
+                border: #dedede;
+            }
+
+            .f_etc .group_site select {
+                width: 185px;
+                height: 24px;
+                padding-left: 7px;
+                color : #6b6a6b;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 0;
+                background-color: #fff;
             }
         </style>
     </head>
@@ -336,7 +377,7 @@
             <caption></caption>
             <tbody>
                 <tr>
-                    <td><a href ="https://www.hancom.com/cs_center/csDownload.do"><img src = "media/bm_download.png" onmouseover="this.src='media/hover다운로드2.png';" onmouseout="this.src='media/bm_download.png';"></a></td>
+                    <td><a href="https://www.hancom.com/cs_center/csDownload.do"><img src = "media/bm_download.png" onmouseover="this.src='media/hover다운로드2.png';" onmouseout="this.src='media/bm_download.png';"></a></td>
                     <td><a href="https://www.hancom.com/goods/subMain.do"><img src = "media/bm_buy.png" onmouseover="this.src='media/hover제품구매2.png';" onmouseout="this.src='media/bm_buy.png';"></a></td>
                     <td><a href="https://www.hancom.com/goods/subMain.do"><img src = "media/bm_question.png" onmouseover="this.src='media/hover질문2.png';" onmouseout="this.src='media/bm_question.png';"></a></td>
                     <td><a href="https://www.hancom.com/board/newsList.do"><img src = "media/bm_bodo.png" onmouseover="this.src='media/hover보도자료2.png';" onmouseout="this.src='media/bm_bodo.png';"></a></td>
@@ -422,21 +463,19 @@
                     </dl>
                 </div>
                 <div class="f_etc clear_both">
-                    <div class="top">
-					    <div class="family_site">
-						    <select name="family_site" id="family_site">
-							    <option value="www.hancom.com" data-language="ko">한국어</option>
-							    <option value="www.hancom.com/global/" data-language="en">ENGLISH</option>
-						    </select>
-					    </div>
-					    <ul class="zoom">
-                            <li>
-                                <img src="media/줌키.png">
-                            </li>
-                        </ul>
-                    </div>
+					<div class="family_site">
+						<select name="family_site" id="family_site">
+							<option value="www.hancom.com" data-language="ko">한국어</option>
+							<option value="www.hancom.com/global/" data-language="en">ENGLISH</option>
+						</select>
+					</div>
+					<ul class="zoom">
+                        <li>
+                            <img src="media/줌키.png">
+                        </li>
+                    </ul>
 					<div class="group_site clear_both">
-						<select id="group_site" name="group_site">
+						<select name="group_site" id="group_site">
 							<option value="">한컴계열사 사이트</option>
 							<option value="https://www.hancomgroup.com/">한글과컴퓨터그룹</option>
 							<option value="https://www.hancom.com/">한글과컴퓨터</option>
