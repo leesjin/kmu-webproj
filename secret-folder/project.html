@@ -145,25 +145,25 @@
                 margin: 300px 0px 0px 0px;
             }
 
-            .f_gnb {
+            .bot {
                 padding-top: 23px;
                 border-bottom: 0;
                 position: relative;
                 margin : 10px 0px 0px 350px;
             }
 
-            .f_gnb dl {
+            .bot dl {
                 display: block;
                 float: none;
                 width: 100%; 
             }
 
-            .f_gnb dd {
+            .bot dd {
                 display: inline-block;
                 font-size: 15px;   
             }
 
-            .f_gnb dd a {
+            .bot dd a {
                 color : gray;
             }
 
@@ -183,23 +183,7 @@
 
             .nav li a {
                 color:white;
-            }
-
-            .bottominner_box .copyright .external_link.malang {
-                right: 103px;
-                margin: 0 350px 0 0;
-            }
-
-            .bottominner_box .copyright .external_link {
-                position: absolute;
-                right: 0px;
-                margin: 0 350px 0 0;
-            }
-
-            .bottominner_box .copyright {
-                padding-top: 22px;
-                font-size: 13px;    
-            }   
+            } 
 
             .hancomback td {
                 position: absolute;
@@ -226,17 +210,7 @@
             }
 
             select {
-                text-rendering: auto;
-                color: initial;
-                letter-spacing: normal;
-                word-spacing: normal;
-                text-transform: none;
-                text-indent: 0px;
-                text-shadow: none;
                 display: inline-block;
-                text-align: start;
-                margin: 0em;
-                font: 400 13.3333px Arial;
             }
 
             .top {
@@ -248,17 +222,17 @@
                 right: 0;
             }
 
-            .f_gnb .area dl dd:hover {
+            .bot .area dl dd:hover {
                 text-decoration: underline;
             }
 
-            .f_gnb .area dl dt {
+            .bot .area dl dt {
                 font-size: 14px;
                 float: left;
                 width: 70px;
             }
 
-            .f_gnb .area dl dd.first {
+            .bot .area dl dd.first {
                 padding-left: 0px;
             }
 
@@ -301,7 +275,7 @@
                 top: 5px;
             }
 
-            .f_etc .family_site {
+            .f_etc .language {
                 box-sizing: border-box;
                 float: left;
                 width: 110px;
@@ -309,7 +283,7 @@
                 border: #dedede;
             }
 
-            .f_etc .family_site select {
+            .f_etc .language select {
                 width: 110px;
                 height: 26px;
                 padding-left: 7px;
@@ -327,14 +301,14 @@
                 margin-left:  -10px;
             }
 
-            .f_etc .group_site {
+            .f_etc .hancomsite {
                 box-sizing: border-box;
                 width: 184px;
                 height: 26px;
                 border: #dedede;
             }
 
-            .f_etc .group_site select {
+            .f_etc .hancomsite select {
                 width: 185px;
                 height: 24px;
                 padding-left: 7px;
@@ -344,12 +318,28 @@
                 padding: 0;
                 background-color: #fff;
             }
+
+            .bottominner_box .copyright .external_link.malang {
+                right: 103px;
+                margin: 0 350px 0 0;
+            }
+
+            .bottominner_box .copyright .external_link {
+                position: absolute;
+                right: 0px;
+                margin: 0 350px 0 0;
+            }
+
+            .bottominner_box .copyright {
+                padding-top: 22px;
+                font-size: 13px;    
+            }  
         </style>
     </head>
     <body>
         <div class="hancomback">
              <header id="header">
-                <div class="header_top box_inner clear_both">
+                <div class="header_top box_inner">
                     <h1 class="logo"><a href="http://www.hancom.com/"><img src="media/메뉴왼쪽사진.png" alt="한글과컴퓨터 HANCOM"></a></h1>
                     <div class="bar">
                         <ul id="bar_left">
@@ -435,7 +425,7 @@
             </div>
             <div class= "event" >
                 <h3>EVENT</h3>
-                <ul  class="no-event clear-both">
+                <ul  class="no-event">
                     <li class="center">
                         <img src="media/노이벤트.png" alt="이벤트 준비중"/>
                     </li>
@@ -443,8 +433,8 @@
             </div>
         </div>
         <div class = bottominner_box>
-            <div class="f_gnb">
-                <div class="area clear_both">
+            <div class="bot">
+                <div class="area">
                     <dl>
                         <dt style="color: white">자료실</dd>
                             <dd class="first"><a href="http://www.hancom.com/hanfriends/friendsTypingDownload.do" style="text-decoration: none">한컴 타자연습</a></dd>
@@ -453,7 +443,7 @@
                         </dt>
                     </dl>
                 </div>
-                <div class="area clar_both">
+                <div class="area">
                     <dl>
                         <dt style="color: white">회사소개</dd>
                             <dd class="first"><a href="http://www.hancom.com/company/companyAbout.do" style="text-decoration: none">회사개요</a></dd>
@@ -462,9 +452,9 @@
                         </dt>
                     </dl>
                 </div>
-                <div class="f_etc clear_both">
-					<div class="family_site">
-						<select name="family_site" id="family_site">
+                <div class="f_etc">
+					<div class="language">
+						<select name="language" id="language">
 							<option value="www.hancom.com" data-language="ko">한국어</option>
 							<option value="www.hancom.com/global/" data-language="en">ENGLISH</option>
 						</select>
@@ -474,8 +464,8 @@
                             <img src="media/줌키.png">
                         </li>
                     </ul>
-					<div class="group_site clear_both">
-						<select name="group_site" id="group_site">
+					<div class="hancomsite">
+						<select name="hancomsite" id="hancomsite">
 							<option value="">한컴계열사 사이트</option>
 							<option value="https://www.hancomgroup.com/">한글과컴퓨터그룹</option>
 							<option value="https://www.hancom.com/">한글과컴퓨터</option>
@@ -499,7 +489,7 @@
                     <li><a href="http://www.hancom.com/member/agreement.do" style="text-decoration: none">이용약관</a></li>
                 </ul>
                 <a class="external_link malang" href="https://www.hancomgroup.com/kr/business/malangmalang" title="말랑말랑"><img src="media/말랑말랑.png" alt="말랑말랑"></a>
-                <a class="external_link" href="http://www.copyrightok.kr/" title="클린사이트"><img src="media/클린사이트.png" alt="클린사이트"></a>
+                <a class="external_link clean" href="http://www.copyrightok.kr/" title="클린사이트"><img src="media/클린사이트.png" alt="클린사이트"></a>
                 <p class="address">
                     경기도 성남시 분당구 대왕판교로 644번길 49 한컴타워 10층 &nbsp; &nbsp; 고객지원 (평일 9시-18시) : 국내고객 1566-5192 <br>
                     사업자등록번호 107-81-52230 &nbsp; &nbsp; 통신판매신고번호 2012-경기성남-1092 &nbsp; &nbsp;  (주)한글과컴퓨터 대표자 : 김상철 <br /> 
