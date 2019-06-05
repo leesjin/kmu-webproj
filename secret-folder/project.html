@@ -18,7 +18,7 @@
                 height: 530px;
             }
 
-            #header {
+            .header{
                 position: absolute;
                 top: 30px;
                 right: 0;
@@ -335,10 +335,9 @@
                 font-size: 13px;    
             }  
 
-            .headerFixed {
+            .headerFixed{
                 position: fixed;
                 top: 0px;
-                margin: 0px;
             }
             
             *{box-sizing: border-box}
@@ -367,8 +366,19 @@
                 background-color: #717171;
             }
         </style>
-        <script type = "text/javascript" src="https://www.hancom.com/js/jquery/jquery-1.9.1.js"></script> 
-        <script type = "text/javascript">
+        <script type = "text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script> 
+        <script>
+            $(document).ready(function() {
+                var head = $('.header').offset();
+                $(window).scroll( function() {
+                    if( $(document).scrollTop() > head.top) {
+                        $('.header').addclass('headerFixed');
+                    }
+                    else {
+                        $('.header').removeClass('headerFixed');
+                    }
+                });
+            });
             var slideIndex = 1;
             showSlides(slideIndex);
 
@@ -393,6 +403,56 @@
                 slides[slideIndex-1].style.display = "block";  
                 dots[slideIndex-1].className += " active";
                 setTimeout(showSlides, 3000)
+            }
+        </script>
+        <script>
+            var files = ["media/지니톡.png",
+                "media/한컴스페.png",
+                "media/말랑말랑톡카페.png"];
+
+            var imgs = new Array();
+            for(var i=0; i<files.length; i++) {
+                imgs[i] = new Image(); 
+                imgs[i].src = files[i]; 
+            }
+
+            var files2 = [ "media/위퍼블.png",
+                "media/오피스.png",
+                "media/말랑말랑톡카페.png"];
+
+            var imgs2 = new Array();
+            for(var i=0; i<files.length; i++) {
+                imgs2[i] = new Image(); 
+                imgs2[i].src = files2[i]; 
+            }
+
+            var files3 = ["media/오피스웹.png",
+                "media/플렉슬.png",
+                "media/말랑말랑톡카페.png"];
+
+            var imgs3 = new Array();
+            for(var i=0; i<files.length; i++) {
+                imgs3[i] = new Image(); 
+                imgs3[i].src = files3[i]; 
+            }
+        
+            var next = 1;
+            function change(img) {
+                img.src = imgs[next].src; 
+                next++; 
+                next %= imgs.length; 
+            }
+
+            function change2(img) {
+                img.src = imgs2[next].src; // 이미지 변경
+                next++; // 다음 이미지
+                next %= imgs2.length; // 개수를 넘으면 처음으로
+            }
+
+            function change3(img) {
+                img.src = imgs3[next].src; // 이미지 변경
+                next++; // 다음 이미지
+                next %= imgs3.length; // 개수를 넘으면 처음으로
             }
         </script>
     </head>
@@ -426,7 +486,7 @@
                     <span class="dot" onclick="currentSlide(6)"></span> 
                 </div>
             </div>
-             <header id="header">
+             <div class="header">
                 <div class="header_top">
                     <h1 class="logo"><a href="http://www.hancom.com/"><img src="media/메뉴왼쪽사진.png" alt="한글과컴퓨터 HANCOM"></a></h1>
                     <div class="bar">
@@ -449,7 +509,7 @@
                         </ul>
                     </div>
                 </div>
-            </header>        
+            </div>        
         </div>
         <table>
             <caption></caption>
@@ -468,9 +528,9 @@
             <tbody>
                 <tr>
                     <td><img src = "media/왼쪽2.png"></td>
-                    <td><a href="https://www.hancom.com/product/productNetfficeMain.do"><img src = "media/한컴스페.png" onmouseover="this.src='media/hover스페이스.png';" onmouseout="this.src='media/한컴스페.png';"></a></td>
-                    <td><a href="https://www.hancom.com/product/productWindowsMain.do?prdt_cd=010779"><img src = "media/오피스.png" onmouseover="this.src='media/hover오피스.png';" onmouseout="this.src='media/오피스.png';"></a></td>
-                    <td><a href="https://www.hancom.com/product/productOfficeMain.do?gnb0=23&gnb1=30"><img src = "media/오피스웹.png" onmouseover="this.src='media/hover오피스웹.png';" onmouseout="this.src='media/오피스웹.png';"></a></td>
+                    <td><img src = "media/한컴스페.png" alt="." onclick="change(this)"></td>
+                    <td><img src = "media/오피스.png" alt="." onclick="change2(this)"></td>
+                    <td><img src = "media/오피스웹.png" alt="." onclick="change3(this)"></td>
                     <td><img src = "media/오른쪽2.png"></td>
                 </tr>
             </tbody>
