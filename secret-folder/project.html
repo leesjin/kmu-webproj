@@ -335,9 +335,9 @@
                 font-size: 13px;    
             }  
 
-            .headerFixed{
+            .headerFixed {
                 position: fixed;
-                top: 0px;
+                top: 0;
             }
             
             *{box-sizing: border-box}
@@ -365,8 +365,12 @@
             .active, .dot:hover {
                 background-color: #717171;
             }
+
+            .moremore {
+                display: inline-block;
+            }
         </style>
-        <script type = "text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script> 
+        <script type = "text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script> 
         <script>
             $(document).ready(function() {
                 var head = $('.header').offset();
@@ -379,6 +383,8 @@
                     }
                 });
             });
+        </script>
+        <script>
             var slideIndex = 1;
             showSlides(slideIndex);
 
@@ -454,6 +460,28 @@
                 next++; // 다음 이미지
                 next %= imgs3.length; // 개수를 넘으면 처음으로
             }
+
+            function over() {
+                var p = document.getElementById("sns1");
+                p.innerHTML = "한글과컴퓨터그룹,AWS Summit 서울 참가현장";
+            }
+
+            function over2() {
+                var p2 = document.getElementById("sns1");
+                p2.innerHTML = "[한컴오피스 뷰어]문서를 열어봐야 한는데 프로그램이 없어 당황스러운 순간, 한컴오피스 뷰어를 사용하면 해결완료!(자세히보기)";
+            }
+
+            function over3() {
+                var p3 = document.getElementById("sns1");
+                p3.innerHTML = "[한컴오피스의 역사:아래아한글부터 한컴오피스 NEO까지]1989년 아래아 한글의 첫 탄생부터 26간의 변화를 살펴볼까요?(자세히보기)";
+            }
+        </script>
+        <script>
+            function wheel(e, obj) {
+                if(e.wheelDelta < 0) {
+                    obj.style.position = "fixed";
+                }
+            }
         </script>
     </head>
     <body>
@@ -486,7 +514,7 @@
                     <span class="dot" onclick="currentSlide(6)"></span> 
                 </div>
             </div>
-             <div class="header">
+             <header class="header">
                 <div class="header_top">
                     <h1 class="logo"><a href="http://www.hancom.com/"><img src="media/메뉴왼쪽사진.png" alt="한글과컴퓨터 HANCOM"></a></h1>
                     <div class="bar">
@@ -509,7 +537,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>        
+            </header>        
         </div>
         <table>
             <caption></caption>
@@ -564,11 +592,13 @@
                 <h3>SNS</h3>
                 <ul>
                     <li>
-                    <a href="http://www.facebook.com/hancom.inc/posts/2231359673613034" style="text-decoration: none">한글과컴퓨터그룹, AWS Summit 서울 참가현장</a>
+                    <p id = "sns1"><a href="http://www.facebook.com/hancom.inc/posts/2231359673613034" style="text-decoration: none">한글과컴퓨터그룹, AWS Summit 서울 참가현장</a></p>
                     </li>
                 </ul>
                 <p class = "moremore">
-                    <img src = "media/페인유.png">
+                    <a class = "f" onmouseover="over()"><img src = "media/sns_f.png"></a>
+                    <a class = "f" onmouseover="over2()"><img src = "media/sns_i.png"></a>
+                    <a class = "f" onmouseover="over3()"><img src = "media/sns_u.png"></a>
                 </p>
             </div>
             <div class= "event" >
